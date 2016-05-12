@@ -1,1 +1,6 @@
 <h1>community</h1>
+
+<% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <p><%= time_ago_in_words(post.created_at) %> ago</p>
+<% end %>
