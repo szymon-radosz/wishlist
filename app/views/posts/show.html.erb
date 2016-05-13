@@ -1,5 +1,10 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
+<hr>
+<h2>number of comments: <%= @post.comments.count %></h2>
+<%= render @post.comments %>
+<h3>Reply to post</h3>
+<%= render 'comments/form' %>
 
 <%= link_to "edit", edit_post_path(@post) %>
 <%= link_to "delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
