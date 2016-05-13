@@ -2,5 +2,5 @@
 
 <% @posts.each do |post| %>
     <h2><%= link_to post.title, post %></h2>
-    <p><%= time_ago_in_words(post.created_at) %> ago</p>
+    <p><%= time_ago_in_words(post.created_at) %> ago by <%= post.user.email %></p>
 <% end %>
