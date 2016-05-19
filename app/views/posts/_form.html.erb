@@ -9,11 +9,14 @@
 			</ul>
 		</div>
 	<% end %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %><br>
-	<br>
-	<%= f.label :content %><br>
-	<%= f.text_field :content %><br>
-	<br>
-	<%= f.submit %>
+	
+	<div class="form-group title">
+		<%= f.label :title, class:"title-form" %><br>
+		<%= f.text_field :title, class: 'form-control' %><br>
+	</div>
+	<div class="form-group title">
+		<%= f.label :content, class:"content-form" %><br>
+		<%= f.text_field :content, class: 'form-control' %><br>
+	</div>
+	<%= f.submit "Submit", class:"btn btn-default" %>
 <% end %>
