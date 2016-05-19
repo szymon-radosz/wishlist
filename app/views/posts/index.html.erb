@@ -1,9 +1,9 @@
-<h1>community</h1>
-
-<% @posts.each do |post| %>
-    <h2><%= link_to post.title, post %></h2>
-    <p><%= time_ago_in_words(post.created_at) %> ago by <%= post.user.email %></p>
-<% end %>
-
-<%= link_to "New post", new_post_path %>
-<%= link_to "Home", root_path %>
+<div class="row community-index">
+    <h1>Latest posts</h1>
+    <div class="col-md-8 col-md-offset-2">
+        <% @posts.each do |post| %>
+        <h2><%= link_to post.title, post %></h2>
+        <p><%= time_ago_in_words(post.created_at) %> ago by <%= post.user.email %></p>
+    <% end %>
+    </div>
+</div>
