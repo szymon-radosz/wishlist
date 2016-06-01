@@ -1,6 +1,13 @@
-<h1>Edit reply</h1>
-
-<%= simple_form_for([@post, @comment]) do |f| %>
-    <%= f.input :comment %>
-    <%= f.submit %>
-<% end %>
+<div class="row comment-edit">
+    <h1>Edit reply</h1>
+    <div class="col-md-8 col-md-offset-2">
+        <%= simple_form_for([@post, @comment]) do |f| %>
+        <div class="form-group title">
+            <%= f.input :comment, class: 'form-control' %>
+        </div>
+        <div class="comment-submit">
+            <%= f.submit "Submit", class:"btn btn-default" %>
+        </div>
+        <% end %>
+    </div>
+</div>
