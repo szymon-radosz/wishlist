@@ -1,7 +1,7 @@
 <div class="row show-post">
     <div class="col-md-8 col-md-offset-2">
         <h1><%= @post.title %></h1>
-        <p><%= @post.content %></p>
+        <p><%= raw @post.content %></p>
         <% if user_signed_in? %>
             <%= link_to "edit", edit_post_path(@post), class: "btn btn-default" %>
             <%= link_to "delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default" %>
@@ -14,5 +14,3 @@
         <% end %>
     </div>
 </div>
-
-
