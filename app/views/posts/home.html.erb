@@ -10,18 +10,18 @@
 <div class="row places-ranking">
     <h2 class="text-ranking">Which places do you enjoy?</h2>
     <div class="rectangle"></div>
-    
+
     <div class="col-md-4 col-sm-4 col-xs-4 img-ranking">
-        <%= image_tag "Berlin-wishlist.jpg" %>
-        <h3>Berlin</h3>
+        <%= image_tag "Berlin-wishlist.jpg", class:"berlin_img" %>
+        <h3 class="berlin_text">Berlin</h3>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-4 img-ranking">
-        <%= image_tag "London-wishlist.jpg" %>
-        <h3>London</h3>
+        <%= image_tag "London-wishlist.jpg", class:"london_img" %>
+        <h3 class="london_text">London</h3>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-4 img-ranking">
-        <%= image_tag "Paris-wishlist.jpg" %>
-        <h3>Paris</h3>
+        <%= image_tag "Paris-wishlist.jpg", class:"paris_img"  %>
+        <h3 class="paris_text">Paris</h3>
     </div>
 </div>
 
@@ -35,4 +35,3 @@
         <%= link_to "Go to community", posts_path, class: "btn-default " %>
     </div>
 </div>
-

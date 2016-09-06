@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,7 +24,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
+
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to "New post", new_post_path %></li>
@@ -42,15 +42,29 @@
 
 <div class="jumbotron">
   <div class="container">
-    
+
     <% flash.each do |name, msg| %>
   		<%= content_tag(:div, msg, class: "alert") %>
   	<% end %>
 
     <%= yield %>
-    
+
     <div class="row footer">
-      <h4 class="text-footer">WishList 2016. All rights reserved.</h4>
+      <div class="col-sm-5 text-footer">
+        <h4><span>WishList</span> 2016. All rights reserved.</h4>
+        <h5>Created by <a href="https://github.com/RadoszSzymon" target="_blank">Radosz Szymon</a></h5>
+      </div>
+      <div class="col-sm-2">
+        <%= image_tag "wish_logo.svg.png", class: "logo"%>
+      </div>
+      <div class="col-sm-5 social_media">
+        <h4>Social Media</h4>
+        <div class="social_icons">
+          <a href="https://github.com/RadoszSzymon" target="_blank"><%= fa_icon "facebook", class:"icon" %></a>
+          <a href="https://github.com/RadoszSzymon" target="_blank"><%= fa_icon "twitter", class:"icon" %></a>
+          <a href="https://github.com/RadoszSzymon" target="_blank"><%= fa_icon "instagram", class:"icon" %></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
