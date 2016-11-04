@@ -1,5 +1,10 @@
-===========   WishList app   ===========
+# WishList
+ROR travelers community
 
-It's rails community application for travelers. 
-You can sign up, create posts in our forum and discuss in comments area if you want.
-Enjoy.
+## Technologies used to build this app
+* Ruby On Rails 4.2.5
+* Bootstrap Sass
+* Bootsy
+
+## Author
+* Radosz Szymon
