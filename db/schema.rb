@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906095131) do
+ActiveRecord::Schema.define(version: 20170318212117) do
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"
@@ -59,6 +59,11 @@ ActiveRecord::Schema.define(version: 20160906095131) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first"
+    t.string   "last"
+    t.integer  "numberofid"
+    t.integer  "yearofstudy"
+    t.string   "profession"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

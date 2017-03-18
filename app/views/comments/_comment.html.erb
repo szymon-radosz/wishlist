@@ -1,8 +1,8 @@
 <div class="comment-section">
     <p class="comment-text"><%= comment.comment %></p>
-    <h4 class="comment-author">published by <%= comment.user.email %></p>
+    <h4 class="comment-author">opublikowane przez <%= comment.user.first %> <%= comment.user.last %></p>
     <% if user_signed_in? %>
-        <%= link_to "Edit", edit_post_comment_path(comment.post, comment), class:"btn btn-default" %>
-        <%= link_to "Delete reply", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?"}, class:"btn btn-default" %>
+        <%= link_to "Edytuj", edit_post_comment_path(comment.post, comment), class:"btn btn-default" %>
+        <%= link_to "Usuń", [comment.post, comment], method: :delete, data: { confirm: "Czy jesteś pewien?"}, class:"btn btn-default" %>
     <% end %>
 </div>
