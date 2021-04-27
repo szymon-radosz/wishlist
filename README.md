@@ -5,6 +5,3 @@ ROR travelers community
 * Ruby On Rails 4.2.5
 * Bootstrap Sass
 * Bootsy
-
-## Author
-* Radosz Szymon
